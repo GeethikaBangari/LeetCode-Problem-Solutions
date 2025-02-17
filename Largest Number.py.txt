@@ -1,0 +1,11 @@
+class Solution:
+    def largestNumber(self, nums: list[int]) -> str:
+  
+        nums = list(map(str, nums))
+        def sorting_key(x):
+            return x * 10 
+        nums.sort(key=sorting_key, reverse=True)
+       
+        if nums[0] == "0":
+            return "0"
+        return "".join(nums)  
